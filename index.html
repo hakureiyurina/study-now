@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart School Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>Smart School Web</h1>
+        <p id="version-display" class="version"></p>
+        <div class="divider"></div>
+        <input type="text" id="schoolCode" class="form-control" placeholder="識別コード">
+        <input type="text" id="userId" class="form-control" placeholder="ユーザーID">
+        <input type="password" id="password" class="form-control" placeholder="パスワード">
+        <button class="btn-login" onclick="checkLogin()">ログイン</button>
+        <p id="error-msg"></p>
+    </div>
+
+    <div id="app-content" style="display:none;">
+        <nav><button onclick="showSection('roulette')">ルーレット</button></nav>
+        <section id="roulette" class="content">
+            <h2>指名ルーレット</h2>
+            <div id="wheel-container">
+                <div id="wheel"></div>
+                <div class="pointer"></div>
+            </div>
+            <button onclick="spinWheel()" class="spin-btn">クリックして回転させる</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
